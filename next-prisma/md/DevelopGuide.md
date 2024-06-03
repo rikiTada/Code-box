@@ -40,3 +40,26 @@ model Post {
 ```bash
 npx prisma migrate dev --name init
 ```
+
+#### エンドポイント作成
+
+```bash
+mkdir -p app/api/blog
+touch app/api/blog/route.ts
+
+bun add @prisma/client
+
+```
+
+```typescript
+// app/api/blog/route.ts
+export async function main() {
+  try {
+    await prisma.$connect();
+  } catch (error) {
+    return Error("DB接続に失敗しました");
+  }
+}
+```
+
+[GET](../app/api/blog/route.ts)
