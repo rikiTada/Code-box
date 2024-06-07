@@ -23,3 +23,18 @@ git pull origin main
 
 ls
 ```
+
+### snippets
+
+```bash
+## Install
+
+# next
+npx create-next-app@latest projectName --typescript --tailwind --eslint
+
+# shadcn
+npx shadcn-ui@latest init
+
+# zustand
+npm install zustand
+```
