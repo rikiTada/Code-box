@@ -1,18 +1,17 @@
 "use client";
-
-import Link from "next/link";
-import { useStore } from "../store";
 import Header from "@/components/header";
+import { useStore } from "@/store";
+import Link from "next/link";
 
-function Counter() {
+export default function Page() {
   const { count, inc } = useStore();
 
   return (
     <div>
-      <Header title="HOME">
-        <Link href="/store">
+      <Header title="下層ページ">
+        <Link href="/">
           <div className="py-2 px-4 inline-block rounded bg-zinc-800 hover:bg-zinc-700 text-white">
-            ⇒ 下層ページ
+            ⇒ HOME
           </div>
         </Link>
       </Header>
@@ -28,8 +27,4 @@ function Counter() {
       </div>
     </div>
   );
-}
-
-export default function Home() {
-  return <Counter />;
 }
